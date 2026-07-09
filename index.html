@@ -14,47 +14,146 @@
 </header>
 
 <nav>
-    <a href="#">Home</a>
-    <a href="#">Recipes</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#recipes">Recipes</a>
+    <a href="#share">Share Recipe</a>
+    <a href="#comments">Comments</a>
+    <a href="#contact">Contact</a>
+
+    <button id="darkModeBtn">🌙 Dark Mode</button>
 </nav>
 
-<section class="welcome">
+<section id="home" class="welcome">
     <h2>Welcome to Swahili Flavours</h2>
     <p>Enjoy authentic Kenyan dishes prepared with love and tradition.</p>
 </section>
 
-<section class="recipes">
+<section id="recipes" class="recipes">
 
-    <div class="card">
-        <img src="images/pilau.jpg" alt="Pilau">
-        <h3>Pilau</h3>
-        <p>A delicious rice dish cooked with spices and meat.</p>
-    </div>
+    <h2>Popular Kenyan Recipes</h2>
 
-    <div class="card">
-        <img src="images/chapati.jpg" alt="Chapati">
-        <h3>Chapati</h3>
-        <p>Soft layered flatbread enjoyed across East Africa.</p>
-    </div>
+    <input
+    type="text"
+    id="searchBar"
+    placeholder="🔍 Search for a recipe..."
+>
 
-    <div class="card">
-        <img src="images/mandazi.jpg" alt="Mandazi">
-        <h3>Mandazi</h3>
-        <p>A sweet fried snack perfect for breakfast or tea.</p>
+    <div class="recipe-grid">
+
+        <div class="card">
+            <img src="images/pilau.jpg" alt="Pilau">
+            <h3>Pilau</h3>
+            <p>Spiced rice cooked with meat and aromatic spices.</p>
+
+            <button class="likeBtn">❤️ Like</button>
+        </div>
+
+        <div class="card">
+            <img src="images/chapati.jpg" alt="Chapati">
+            <h3>Chapati</h3>
+            <p>Soft layered flatbread loved across East Africa.</p>
+
+            <button class="likeBtn">❤️ Like</button>
+        </div>
+
+        <div class="card">
+            <img src="images/mandazi.jpg" alt="Mandazi">
+            <h3>Mandazi</h3>
+            <p>Sweet fried bread perfect for breakfast or tea.</p>
+
+            <button class="likeBtn">❤️ Like</button>
+        </div>
+
+        <div class="card">
+            <img src="images/fried chicken ,kachumbari and ugali.jpg" alt="Fried Chicken">
+            <h3>Fried Chicken, Ugali & Kachumbari</h3>
+            <p>Crispy fried chicken served with ugali and fresh kachumbari.</p>
+
+            <button class="likeBtn">❤️ Like</button>
+        </div>
+
+        <div class="card">
+            <img src="images/mangoe juice.jpg" alt="Mango Juice">
+            <h3>Mango Juice</h3>
+            <p>Refreshing natural juice made from ripe mangoes.</p>
+
+            <button class="likeBtn">❤️ Like</button>
+        </div>
+
+        <div class="card">
+            <img src="images/fish.jpg" alt="Fried Fish">
+            <h3>Fried Fish</h3>
+            <p>Well-seasoned fish fried to perfection.</p>
+
+            <button class="likeBtn">❤️ Like</button>
+        </div>
+
+        <div class="card">
+            <img src="images/fruit salad.jpg" alt="Fruit Salad">
+            <h3>Fruit Salad</h3>
+            <p>A healthy mix of fresh tropical fruits.</p>
+
+            <button class="likeBtn">❤️ Like</button>
+        </div>
+
+        <div class="card">
+            <img src="images/samosa.jpg" alt="Samosa">
+            <h3>Samosa</h3>
+            <p>Crispy pastry filled with spicy meat.</p>
+
+            <button class="likeBtn">❤️ Like</button>
+        </div>
+
+        <div class="card">
+            <img src="images/nyama choma.jpg" alt="Nyama Choma">
+            <h3>Nyama Choma</h3>
+            <p>Kenya's famous grilled meat enjoyed with family and friends.</p>
+
+            <button class="likeBtn">❤️ Like</button>
+        </div>
+
     </div>
 
 </section>
 
-<section class="about">
-    <h2>About Us</h2>
-    <p>Swahili Flavours shares simple and tasty Kenyan recipes for everyone to enjoy.</p>
+<section id="share" class="share-recipe">
+    <h2>Share Your Recipe</h2>
+
+    <form>
+        <input type="text" placeholder="Your Name" required>
+
+        <input type="text" placeholder="Recipe Title" required>
+
+        <textarea rows="6" placeholder="Write your recipe here..." required></textarea>
+
+        <button type="submit">Submit Recipe</button>
+    </form>
+</section>
+
+<section id="comments" class="comments">
+    <h2>Leave a Comment</h2>
+
+    <form>
+        <input type="text" placeholder="Your Name">
+
+        <textarea rows="5" placeholder="Write your comment"></textarea>
+
+        <button type="submit">Post Comment</button>
+    </form>
+</section>
+
+<section id="contact" class="about">
+    <h2>Contact Us</h2>
+    <p>Email: swahiliflavours@gmail.com</p>
+    <p>Phone: +254 700 000 000</p>
+    <p>Follow us on social media for more recipes.</p>
 </section>
 
 <footer>
-    <p>© 2026 Swahili Flavours</p>
+    <p>© 2026 Swahili Flavours. All Rights Reserved.</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
