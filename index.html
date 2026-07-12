@@ -6,8 +6,24 @@
     <title>Swahili Flavours</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+    <body>
+
+<div id="welcomePopup">
+
+    <div class="popup-content">
+
+        <h2>Welcome to Swahili Flavours!</h2>
+
+        <p>Discover authentic Kenyan recipes and share your favourite meals.</p>
+
+        <button id="closePopup">Explore Recipes</button>
+
+    </div>
+
+</div>
+
+<header>
 <header>
     <h1>Swahili Flavours</h1>
     <p>Discover Delicious Kenyan Recipes</p>
@@ -29,6 +45,14 @@
 </section>
 
 <section id="recipes" class="recipes">
+
+    <section id="specialMeal">
+
+    <h2>🍽️ Today's Special</h2>
+
+    <p id="mealName"></p>
+
+</section>
 
     <h2>Popular Kenyan Recipes</h2>
 
@@ -119,15 +143,19 @@
 <section id="share" class="share-recipe">
     <h2>Share Your Recipe</h2>
 
-    <form>
-        <input type="text" placeholder="Your Name" required>
+   <form id="recipeForm">
 
-        <input type="text" placeholder="Recipe Title" required>
+    <input type="text" id="userName" placeholder="Your Name" required>
 
-        <textarea rows="6" placeholder="Write your recipe here..." required></textarea>
+    <input type="text" id="recipeTitle" placeholder="Recipe Title" required>
 
-        <button type="submit">Submit Recipe</button>
-    </form>
+    <textarea id="recipeDescription" rows="6" placeholder="Write your recipe here..." required></textarea>
+
+    <button type="submit">Submit Recipe</button>
+
+     <p id="successMessage"></p>
+
+</form> 
 </section>
 
 <section id="comments" class="comments">

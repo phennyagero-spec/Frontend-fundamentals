@@ -43,3 +43,59 @@ likeButtons.forEach(function(button){
     });
 
 });
+
+const meals = [
+    "🍛 Pilau",
+    "🥟 Samosa",
+    "🐟 Fried Fish",
+    "🥭 Mango Juice",
+    "🍖 Nyama Choma",
+    "🥗 Fruit Salad",
+    "🥖 Chapati",
+    "🍩 Mandazi",
+    "🍗 Fried Chicken, Ugali & Kachumbari"
+];
+
+const randomMeal = meals[Math.floor(Math.random() * meals.length)];
+
+document.getElementById("mealName").textContent = randomMeal;
+
+const popup = document.getElementById("welcomePopup");
+const closePopup = document.getElementById("closePopup");
+
+closePopup.addEventListener("click", function(){
+
+    popup.style.display = "none";
+
+});
+
+// Form Validation
+
+const recipeForm = document.getElementById("recipeForm");
+
+recipeForm.addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    const userName = document.getElementById("userName").value.trim();
+    const recipeTitle = document.getElementById("recipeTitle").value.trim();
+    const recipeDescription = document.getElementById("recipeDescription").value.trim();
+
+    const successMessage = document.getElementById("successMessage");
+
+    if(userName === "" || recipeTitle === "" || recipeDescription === ""){
+
+        successMessage.style.color = "red";
+        successMessage.textContent = "⚠ Please fill in all the fields.";
+
+    }else{
+
+        successMessage.style.color = "green";
+        successMessage.textContent =
+        "🎉 Thank you! Your recipe has been submitted successfully.";
+
+        recipeForm.reset();
+
+    }
+
+});
