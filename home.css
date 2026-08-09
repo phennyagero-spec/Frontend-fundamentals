@@ -1,0 +1,318 @@
+/* ==============================
+   HOME HERO
+   ============================== */
+
+.home-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 150px 8% 120px;
+    background: url("images/hotel.jpg") center/cover no-repeat;
+    overflow: hidden;
+}
+
+.home-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(45, 27, 15, 0.72) 0%, rgba(45, 27, 15, 0.55) 55%, rgba(45, 27, 15, 0.82) 100%);
+}
+
+.home-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+    color: #fff;
+}
+
+.home-hero-badge {
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #F4E9DA;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border-radius: 30px;
+    margin-bottom: 25px;
+}
+
+.home-hero-content h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 68px;
+    line-height: 1.12;
+    margin-bottom: 25px;
+}
+
+.home-hero-content p {
+    font-size: 19px;
+    line-height: 1.8;
+    color: #F4E9DA;
+    max-width: 560px;
+    margin: 0 auto 40px;
+}
+
+.home-hero-ctas {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-btn-outline {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.hero-btn-outline:hover {
+    background: #fff;
+    color: #7A4E2D;
+}
+
+.hero-wave {
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 90px;
+    z-index: 2;
+}
+
+
+/* ==============================
+   HIGHLIGHTS STRIP
+   ============================== */
+
+.home-highlights {
+    background: #F8F5F0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1150px;
+    margin: -10px auto 0;
+    padding: 30px 8% 90px;
+}
+
+.highlight-card {
+    background: #fffdf9;
+    border-radius: 18px;
+    padding: 36px 28px;
+    text-align: center;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+    border-bottom: 3px dashed #e2d8c8;
+    transition: transform 0.3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-6px);
+}
+
+.highlight-icon {
+    width: 54px;
+    height: 54px;
+    margin: 0 auto 18px;
+    color: #C89B3C;
+}
+
+.highlight-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.highlight-card h3 {
+    font-family: "Playfair Display", serif;
+    color: #7A4E2D;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.highlight-card p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   SIGNATURE DISH SPOTLIGHT
+   ============================== */
+
+.signature-spotlight {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 40px 8% 110px;
+    gap: 70px;
+}
+
+.spotlight-image {
+    position: relative;
+}
+
+.spotlight-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 25px;
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0% 100%);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.18);
+}
+
+.spotlight-text span {
+    color: #C89B3C;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 4px;
+}
+
+.spotlight-text h2 {
+    font-family: "Playfair Display", serif;
+    color: #7A4E2D;
+    font-size: 44px;
+    margin: 18px 0 22px;
+    line-height: 1.15;
+}
+
+.spotlight-text p {
+    color: #666;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.spotlight-price {
+    font-family: "Playfair Display", serif;
+    font-size: 26px;
+    color: #8b5c38;
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+
+
+/* ==============================
+   RESERVATION OVERLAYS: LOADING + SUCCESS
+   ============================== */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(122, 78, 45, 0.97);
+    color: #fff;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 3000;
+    padding: 20px;
+}
+
+.overlay.show {
+    display: flex;
+}
+
+.spinner {
+    width: 56px;
+    height: 56px;
+    border: 5px solid rgba(255, 255, 255, 0.25);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+    margin-bottom: 25px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.overlay p {
+    font-size: 16px;
+    max-width: 400px;
+    line-height: 1.6;
+    color: #f4e9da;
+}
+
+.stamp {
+    border: 4px solid #C89B3C;
+    color: #C89B3C;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 14px 28px;
+    border-radius: 12px;
+    transform: rotate(-6deg);
+    margin-bottom: 25px;
+    animation: stampIn 0.4s ease;
+}
+
+@keyframes stampIn {
+    from {
+        opacity: 0;
+        transform: rotate(-6deg) scale(1.4);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(-6deg) scale(1);
+    }
+}
+
+.overlay h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.redirect-note {
+    margin-top: 14px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #d4a437 !important;
+}
+
+
+/* ==============================
+   MOBILE
+   ============================== */
+
+@media (max-width: 900px) {
+
+    .home-hero-content h1 {
+        font-size: 46px;
+    }
+
+    .home-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .signature-spotlight {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .spotlight-image img {
+        height: 320px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .home-hero {
+        padding: 130px 6% 100px;
+    }
+
+    .home-hero-content h1 {
+        font-size: 36px;
+    }
+
+    .home-hero-content p {
+        font-size: 16px;
+    }
+}

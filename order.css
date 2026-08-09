@@ -1,0 +1,435 @@
+/* ==============================
+   ORDER PAGE
+   ============================== */
+
+.order-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 150px 6% 100px;
+}
+
+.order-header {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.order-header span {
+    display: block;
+    color: #d4a437;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.order-header h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 44px;
+    color: #7A4E2D;
+    margin: 15px 0;
+}
+
+.order-header p {
+    color: #666;
+    font-size: 17px;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.order-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: start;
+}
+
+
+/* ==============================
+   ORDER TICKET (signature element)
+   Styled like a restaurant paper ticket
+   ============================== */
+
+.order-ticket {
+    background: #fffdf9;
+    border-radius: 6px;
+    padding: 35px 30px 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+    font-family: "Poppins", sans-serif;
+}
+
+/* torn-paper edge at the bottom */
+.order-ticket::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    height: 20px;
+    background-image: linear-gradient(-45deg, #fffdf9 8px, transparent 0),
+                       linear-gradient(45deg, #fffdf9 8px, transparent 0);
+    background-position: bottom left;
+    background-size: 16px 20px;
+    background-repeat: repeat-x;
+}
+
+.ticket-top {
+    text-align: center;
+    padding-bottom: 18px;
+    border-bottom: 2px dashed #e2d8c8;
+    margin-bottom: 18px;
+}
+
+.ticket-top h3 {
+    font-family: "Playfair Display", serif;
+    color: #7A4E2D;
+    font-size: 24px;
+}
+
+.ticket-sub {
+    display: block;
+    margin-top: 6px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #b39a76;
+}
+
+.ticket-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-height: 20px;
+}
+
+.ticket-empty {
+    text-align: center;
+    color: #888;
+    font-size: 15px;
+    line-height: 1.7;
+    padding: 20px 10px;
+}
+
+.ticket-empty a {
+    color: #C89B3C;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.ticket-empty a:hover {
+    text-decoration: underline;
+}
+
+.ticket-row {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    color: #444;
+}
+
+.ticket-row .item-name {
+    font-weight: 500;
+}
+
+.ticket-row .item-price {
+    color: #8b5c38;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.qty-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.qty-control button {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #d4a437;
+    background: #fff;
+    color: #8b5c38;
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.qty-control button:hover {
+    background: #d4a437;
+    color: #fff;
+}
+
+.qty-control .qty-value {
+    min-width: 16px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.remove-item {
+    border: none;
+    background: none;
+    color: #b34747;
+    font-size: 18px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 2px;
+}
+
+.remove-item:hover {
+    color: #7c1f1f;
+}
+
+.add-more {
+    display: flex;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.add-more select {
+    flex: 1;
+    padding: 12px 14px;
+    border: 1px solid #e2d8c8;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14px;
+    background: #fff;
+    color: #444;
+}
+
+.add-more button {
+    border: none;
+    background: #d4a437;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.add-more button:hover {
+    background: #8b5c38;
+}
+
+.ticket-divider {
+    border-top: 2px dashed #e2d8c8;
+    margin: 22px 0 16px;
+}
+
+.ticket-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    color: #7A4E2D;
+    font-weight: 700;
+}
+
+
+/* ==============================
+   ORDER FORM
+   ============================== */
+
+.order-form {
+    background: #fff;
+    border-radius: 20px;
+    padding: 35px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.order-form h3 {
+    font-family: "Playfair Display", serif;
+    color: #7A4E2D;
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: inherit;
+    outline: none;
+    background: #fdfcfa;
+}
+
+.order-form input:focus,
+.order-form select:focus,
+.order-form textarea:focus {
+    border-color: #d4a437;
+}
+
+.order-form textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.confirm-btn {
+    margin-top: 10px;
+    border: none;
+    background: #C89B3C;
+    color: white;
+    padding: 16px 30px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.confirm-btn:hover {
+    background: #7A4E2D;
+}
+
+.confirm-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* ==============================
+   OVERLAYS: LOADING + SUCCESS
+   ============================== */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(122, 78, 45, 0.97);
+    color: #fff;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 3000;
+    padding: 20px;
+}
+
+.overlay.show {
+    display: flex;
+}
+
+.spinner {
+    width: 56px;
+    height: 56px;
+    border: 5px solid rgba(255, 255, 255, 0.25);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+    margin-bottom: 25px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+#loadingText {
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+.stamp {
+    border: 4px solid #C89B3C;
+    color: #C89B3C;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 14px 28px;
+    border-radius: 12px;
+    transform: rotate(-6deg);
+    margin-bottom: 25px;
+    animation: stampIn 0.4s ease;
+}
+
+@keyframes stampIn {
+    from {
+        opacity: 0;
+        transform: rotate(-6deg) scale(1.4);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(-6deg) scale(1);
+    }
+}
+
+.overlay h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.overlay p {
+    font-size: 16px;
+    max-width: 400px;
+    line-height: 1.6;
+    color: #f4e9da;
+}
+
+.redirect-note {
+    margin-top: 14px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #d4a437 !important;
+}
+
+
+/* ==============================
+   MOBILE
+   ============================== */
+
+@media (max-width: 800px) {
+
+    .order-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .order-header h1 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .ticket-row {
+        grid-template-columns: 1fr auto;
+        row-gap: 6px;
+    }
+
+    .ticket-row .item-price {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .qty-control {
+        grid-column: 1 / span 2;
+        grid-row: 2;
+    }
+}

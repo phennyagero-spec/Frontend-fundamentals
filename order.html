@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Your Order — Swahili Flavours</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="order.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            <h2>Swahili Flavours</h2>
+            <span>Taste of the Swahili Coast</span>
+        </div>
+
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <a href="menu.html" class="book-btn">Back to Menu</a>
+
+    </header>
+
+
+    <!-- ================= ORDER SECTION ================= -->
+
+    <section class="order-page">
+
+        <div class="order-header">
+            <span>YOUR ORDER</span>
+            <h1>Complete Your Order</h1>
+            <p>Review the dishes below, add anything else you fancy, then tell us where to send it.</p>
+        </div>
+
+        <div class="order-grid">
+
+            <!-- ============ ORDER TICKET ============ -->
+            <div class="order-ticket">
+
+                <div class="ticket-top">
+                    <h3>Swahili Flavours</h3>
+                    <span class="ticket-sub">Order Ticket · <span id="ticketDate"></span></span>
+                </div>
+
+                <div class="ticket-items" id="ticketItems">
+                    <!-- JS injects rows here -->
+                </div>
+
+                <p class="ticket-empty" id="ticketEmpty">
+                    Your ticket is empty. <a href="menu.html">Browse the menu</a> and hit "Order Now" on anything that looks good.
+                </p>
+
+                <div class="add-more">
+                    <select id="addItemSelect">
+                        <option value="">+ Add another dish</option>
+                    </select>
+                    <button type="button" id="addItemBtn">Add</button>
+                </div>
+
+                <div class="ticket-divider"></div>
+
+                <div class="ticket-total">
+                    <span>Total</span>
+                    <span id="ticketTotal">Ksh 0</span>
+                </div>
+
+            </div>
+
+            <!-- ============ CUSTOMER DETAILS FORM ============ -->
+            <form class="order-form" id="orderForm">
+
+                <h3>Your Details</h3>
+
+                <div class="form-row">
+                    <input type="text" id="fullName" placeholder="Full Name" required>
+                    <input type="tel" id="phone" placeholder="Phone Number" required>
+                </div>
+
+                <input type="email" id="email" placeholder="Email Address (optional)">
+
+                <div class="form-row">
+                    <select id="orderType">
+                        <option value="delivery">Delivery</option>
+                        <option value="pickup">Pickup</option>
+                        <option value="dinein">Dine-in</option>
+                    </select>
+                    <input type="text" id="tableNumber" placeholder="Table number" style="display:none;">
+                </div>
+
+                <textarea id="addressField" placeholder="Delivery address"></textarea>
+
+                <textarea id="notesField" placeholder="Special requests (optional)"></textarea>
+
+                <button type="submit" class="confirm-btn">
+                    Confirm Order — <span id="formTotal">Ksh 0</span>
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= LOADING OVERLAY ================= -->
+    <div class="overlay" id="loadingOverlay">
+        <div class="spinner"></div>
+        <p id="loadingText">Firing up the grill…</p>
+    </div>
+
+    <!-- ================= SUCCESS OVERLAY ================= -->
+    <div class="overlay" id="successOverlay">
+        <div class="stamp">✓ Confirmed</div>
+        <h2>Order Placed!</h2>
+        <p id="successMsg">Thank you! Your order is on its way.</p>
+        <p class="redirect-note">Taking you back home…</p>
+    </div>
+
+    <script src="order.js"></script>
+
+</body>
+</html>
