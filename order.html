@@ -30,16 +30,23 @@
         </div>
 
         <nav>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
+                <li class="mobile-only-cta"><a href="menu.html">Back to Menu</a></li>
             </ul>
         </nav>
 
         <a href="menu.html" class="book-btn">Back to Menu</a>
 
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
     </header>
+
+    <div class="nav-backdrop" id="navBackdrop"></div>
 
 
     <!-- ================= ORDER SECTION ================= -->
@@ -136,6 +143,7 @@
         <p class="redirect-note">Taking you back home…</p>
     </div>
 
+    <script src="nav.js"></script>
     <script src="order.js"></script>
 
 </body>

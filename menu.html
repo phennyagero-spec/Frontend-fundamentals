@@ -30,7 +30,7 @@
 
     <nav>
 
-        <ul class="nav-links">
+        <ul class="nav-links" id="navLinks">
 
             <li><a href="index.html">Home</a></li>
 
@@ -42,13 +42,21 @@
 
             <li><a href="index.html#contact">Contact</a></li>
 
+            <li class="mobile-only-cta"><a href="index.html#reservation">Book Table</a></li>
+
         </ul>
 
     </nav>
 
    <a href="index.html#reservation" class="book-btn">Book Table</a>
 
+   <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+       <span></span><span></span><span></span>
+   </button>
+
 </header>
+
+<div class="nav-backdrop" id="navBackdrop"></div>
 
 
 <section class="signature-menu" id="menu">
@@ -198,13 +206,13 @@ Golden fried whole tilapia served with ugali and fresh kachumbari.
 
 </div>
 
-<!-- Grilled Chicken -->
+<!-- Grilled Hen -->
 
 <div class="menu-card">
 
-<img src="images/grilled chicken.jpg">
+<img src="images/grilled hen.jpg">
 
-<h4>Grilled Chicken</h4>
+<h4>Grilled Hen</h4>
 
 <button class="view-btn">View Details</button>
 
@@ -1086,6 +1094,45 @@ cream for a sweet luxurious taste.
 
 
 
+<!-- Fruit Salad -->
+
+
+<div class="menu-card">
+
+
+<img src="images/fruit salad.jpg">
+
+
+<h4>Fruit Salad</h4>
+
+
+<button class="view-btn">View Details</button>
+
+
+<div class="menu-details">
+
+
+<p>
+A refreshing mix of fresh tropical fruits, carefully prepared
+to create a colourful, healthy and delicious dessert.
+</p>
+
+
+<h5>Ksh 300</h5>
+
+
+<a href="#" class="order-btn">Order Now</a>
+
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
 <!-- ================= FOOTER ================= -->
 
 <footer class="footer">
@@ -1122,6 +1169,7 @@ cream for a sweet luxurious taste.
     </p>
 
 </footer>
+<script src="nav.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

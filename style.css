@@ -6,9 +6,18 @@
     box-sizing:border-box;
 }
 
+html{
+    overflow-x: hidden;
+}
+
 body{
     background: #F8F5F0;
     color: #333;
+    overflow-x: hidden;
+}
+
+img{
+    max-width: 100%;
 }
  
  /* ================= NAVIGATION ================= */
@@ -116,6 +125,144 @@ body{
     background:#7A4E2D;
 
 }
+
+/* ================= MOBILE NAV TOGGLE ================= */
+
+.hamburger{
+    display:none;
+    flex-direction:column;
+    justify-content:space-between;
+    width:26px;
+    height:18px;
+    background:none;
+    border:none;
+    cursor:pointer;
+    padding:0;
+    z-index:1200;
+}
+
+.hamburger span{
+    display:block;
+    height:3px;
+    width:100%;
+    background:#7A4E2D;
+    border-radius:2px;
+    transition:.3s;
+}
+
+.hamburger.active span:nth-child(1){
+    transform:translateY(7.5px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2){
+    opacity:0;
+}
+
+.hamburger.active span:nth-child(3){
+    transform:translateY(-7.5px) rotate(-45deg);
+}
+
+.nav-backdrop{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(45,27,15,.45);
+    z-index:1050;
+}
+
+.nav-backdrop.active{
+    display:block;
+}
+
+.mobile-only-cta{
+    display:none;
+}
+
+@media (max-width:900px){
+
+    .navbar{
+        padding:18px 6%;
+    }
+
+    .logo h2{
+        font-size:28px;
+    }
+
+    .logo span{
+        font-size:11px;
+    }
+
+    .hamburger{
+        display:flex;
+    }
+
+    .book-btn{
+        display:none;
+    }
+
+    .nav-links{
+        position:fixed;
+        top:0;
+        right:-100%;
+        width:min(78%,320px);
+        height:100vh;
+        background:#fffdf9;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:0;
+        padding:110px 30px 40px;
+        box-shadow:-10px 0 35px rgba(0,0,0,.18);
+        transition:right .35s ease;
+        z-index:1100;
+        overflow-y:auto;
+    }
+
+    .nav-links.active{
+        right:0;
+    }
+
+    .nav-links li{
+        width:100%;
+        border-bottom:1px solid #eee;
+    }
+
+    .nav-links a{
+        display:block;
+        padding:16px 0;
+        font-size:18px;
+    }
+
+    .mobile-only-cta{
+        display:block;
+        margin-top:20px;
+        width:100%;
+    }
+
+    .mobile-only-cta a{
+        display:block;
+        text-align:center;
+        background:#C89B3C;
+        color:#fff;
+        padding:14px 0;
+        border-radius:30px;
+        font-weight:600;
+        text-decoration:none;
+        border-bottom:none;
+    }
+}
+
+@media (max-width:400px){
+
+    .logo h2{
+        font-size:24px;
+    }
+
+    .nav-links{
+        width:82%;
+        padding:100px 24px 30px;
+    }
+}
+
 /*==========================
         HERO SECTION
 ===========================*/
@@ -542,6 +689,13 @@ body{
     gap: 25px;
 }
 
+@media (max-width: 900px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+}
+
 .gallery-grid img {
     width: 100%;
     height: 280px;
@@ -754,8 +908,9 @@ body{
 
 .footer-links {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    gap: 15px 30px;
     margin: 30px 0;
 }
 
@@ -827,6 +982,44 @@ body{
         grid-template-columns: 1fr;
     }
 
+    .reservation-section,
+    .contact-section {
+        padding: 70px 6%;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 28px 25px;
+    }
+
+    .section-title h2 {
+        font-size: 34px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .footer h2 {
+        font-size: 30px;
+    }
+
+    .footer {
+        padding: 50px 6% 25px;
+    }
+
+    .about-text h2 {
+        font-size: 32px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .hero-btn {
+        padding: 14px 32px;
+        font-size: 15px;
+    }
 }
 
 /* ================================

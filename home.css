@@ -290,15 +290,64 @@
 
     .home-highlights {
         grid-template-columns: 1fr;
+        padding: 20px 6% 70px;
     }
 
     .signature-spotlight {
         grid-template-columns: 1fr;
         gap: 40px;
+        padding: 30px 6% 80px;
     }
 
     .spotlight-image img {
         height: 320px;
+    }
+
+    .spotlight-text h2 {
+        font-size: 34px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .hero-wave {
+        height: 55px;
+    }
+
+    .home-hero-badge {
+        font-size: 12px;
+        padding: 7px 16px;
+    }
+
+    .home-hero-ctas {
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+        width: 100%;
+    }
+
+    .home-hero-ctas .hero-btn {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    .highlight-card {
+        padding: 28px 22px;
+    }
+
+    .spotlight-image img {
+        height: 240px;
+        clip-path: none;
+        border-radius: 20px;
+    }
+
+    .spotlight-text h2 {
+        font-size: 28px;
+    }
+
+    .spotlight-text p {
+        font-size: 15px;
     }
 }
 
@@ -309,10 +358,23 @@
     }
 
     .home-hero-content h1 {
-        font-size: 36px;
+        font-size: 32px;
     }
 
     .home-hero-content p {
-        font-size: 16px;
+        font-size: 15px;
+    }
+
+    .overlay h2 {
+        font-size: 26px;
+    }
+
+    .overlay p {
+        font-size: 15px;
+    }
+
+    .stamp {
+        font-size: 18px;
+        padding: 12px 22px;
     }
 }

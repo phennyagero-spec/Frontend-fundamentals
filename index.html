@@ -30,18 +30,25 @@
         </div>
 
         <nav>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="menu.html">Menu</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li class="mobile-only-cta"><a href="#reservation">Book Table</a></li>
             </ul>
         </nav>
 
         <a href="#reservation" class="book-btn">Book Table</a>
 
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+
     </header>
+
+    <div class="nav-backdrop" id="navBackdrop"></div>
 
 
     <!-- ================= HOME HERO ================= -->
@@ -391,6 +398,7 @@
         <p class="redirect-note">Taking you to the menu…</p>
     </div>
 
+    <script src="nav.js"></script>
     <script src="reservation.js"></script>
 
 </body>

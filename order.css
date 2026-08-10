@@ -403,12 +403,46 @@
 
 @media (max-width: 800px) {
 
+    .order-page {
+        padding: 130px 6% 70px;
+    }
+
     .order-grid {
         grid-template-columns: 1fr;
     }
 
     .order-header h1 {
         font-size: 34px;
+    }
+
+    .order-ticket {
+        padding: 28px 22px 22px;
+    }
+
+    .order-form {
+        padding: 28px 22px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .add-more {
+        flex-direction: column;
+    }
+
+    .add-more button {
+        width: 100%;
+    }
+
+    .qty-control button {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .remove-item {
+        font-size: 20px;
+        padding: 4px 6px;
     }
 }
 
@@ -431,5 +465,26 @@
     .qty-control {
         grid-column: 1 / span 2;
         grid-row: 2;
+    }
+
+    .order-header h1 {
+        font-size: 28px;
+    }
+
+    .order-header p {
+        font-size: 15px;
+    }
+
+    .overlay h2 {
+        font-size: 26px;
+    }
+
+    .overlay p {
+        font-size: 15px;
+    }
+
+    .stamp {
+        font-size: 18px;
+        padding: 12px 22px;
     }
 }
